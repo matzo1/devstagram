@@ -34,6 +34,7 @@
                 </p>
                 @enderror
             </div>
+
             <div class="mb-5">
                 <label
                     for="username"
