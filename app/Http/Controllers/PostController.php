@@ -20,4 +20,20 @@ class PostController extends Controller
         
         return view('posts.create');
     }
+    
+    public function store(Request $request){
+        
+        //Validacion
+        $this->validate($request, [
+            'titulo' => 'required|max:255',
+            'descripcion' => 'required',
+        ]);
+        /*
+        User::create([
+            'name' => $request->name,
+            'username' => $request->username,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);*/
+    }
 }
